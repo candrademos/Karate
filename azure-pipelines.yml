@@ -1,0 +1,45 @@
+name: $(SourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
+
+resources:
+  repositories:
+  - repository: self
+  - repository: qa-pipeline-templates
+    type: git
+    name: BP-DevOps-Infrastructure/common-pipeline-template-sqa
+    ref: master
+  - repository: qa-utils-templates
+    type: git
+    name: BP-Quality-Management/common-pipeline-template-sqa
+    ref: master
+
+trigger:
+  - master
+#  - feature/*
+
+parameters:
+  - name: NUM_AGENTES
+    displayName: 'Num agentes para ejecución'
+    default: 1
+    values:
+      - 1
+      - 2
+
+  - name: Flujo
+    displayName: 'Flujo a ejecutar'
+    default: Todos
+    values:
+      - Todos
+      - TCS
+      - GraphQL
+      - Database
+      -
+variables:
+  - group: sqa-cross-generico
+  - group: sqa-cross-arq-karate
+
+stages:
+  - template: karate/init.yml@qa-pipeline-templates
+    parameters:
+      NUM_AGENTES: ${{parameters.NUM_AGENTES}}
+      FLUJO: ${{parameters.FLUJO}}
+      TEST_EXTRA_PARAMETERS: ""
