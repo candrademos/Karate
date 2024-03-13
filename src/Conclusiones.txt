@@ -1,0 +1,13 @@
+                                          /****************************************************************************
+							 *	Archivo Físico:		CONCLUSIONES Y HALLAZGOS DEL EJERCICIO   	    *
+							 *	Archivo:	            Conclusiones.txt		                      *
+							 *	Producto:			AUTOMATIZACIÓN DE API PRUEBA                  *
+ 							 *	Elaborado por:		CINTHYA ANDRADE MOSUERA			    *
+							 *--------------------------------------------------------------------------*
+
+Como conclusión podemos decir que el uso del framework KARATE nos es de gran beneficio para automatizar las diferentes pruebas que pueden existir en el área de calidad
+debido a que ofrece un sin número de opciones entre ellas está la de realizar la automatización de manera gráfica o también de forma estadística esta ultima permitiendo
+generar archivos mp4 momento de visualizar los resultados obtenidos en la automatización.
+Este framework es fácil  de utilizar
+uno de las cajas de texto o sea clickeando los botones que se encuentren en el transcurso del flujo de la automatización, cada uno de estos movimientos lo va reflejando
+como codigo en nuestro proyecto lo cual nos ayuda a que el tiempo de automatización sea mínimo en comparación con otros frameworks de automatización.
